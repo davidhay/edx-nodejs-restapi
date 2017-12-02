@@ -31,7 +31,7 @@ module.exports = {
     const updatedPost = req.body;
     delete updatedPost.comments;//you can't send comments with an updated post
     workWithPost(req, res, postId, () => {
-      Object.assign(store.posts[postId],updatedPost);
+      Object.assign(posts[postId],updatedPost);
       res.send(`updated post - postId:${postId}`);
     });
   },

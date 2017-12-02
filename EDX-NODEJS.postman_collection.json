@@ -1,0 +1,162 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EDX-NODEJS",
+		"_postman_id": "7ee2b7ac-35e5-bc58-a0a6-5b7d8fa0c089",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL POSTS",
+			"request": {
+				"url": "http://localhost:3000/posts/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ADD POST",
+			"request": {
+				"url": "http://localhost:3000/posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"name\": \"Top 10 ES6 Features\", \n\t\"url\":\"http://webapplog.com/es6\", \n\t\"text\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE SPECIFIC POST",
+			"request": {
+				"url": "http://localhost:3000/posts/0",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"text\": \"UPDATED TEXT FOR POST 0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE SPECIFIC POST",
+			"request": {
+				"url": "http://localhost:3000/posts/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"text\": \"UPDATED TEXT FOR POST 0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ADD COMMENT TO SPECIFIC POST",
+			"request": {
+				"url": "http://localhost:3000/posts/0/comments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\":\"comment-2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL COMMENTS FOR SPECIFIC POST",
+			"request": {
+				"url": "http://localhost:3000/posts/0/comments",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\":\"comment-2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE SPECIFIC COMMENT FOR SPECIFIC POST",
+			"request": {
+				"url": "http://localhost:3000/posts/0/comments/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\":\"updated-comment-1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE SPECIFIC COMMENT FOR SPECIFIC POST",
+			"request": {
+				"url": "http://localhost:3000/posts/0/comments/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\":\"comment-2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
